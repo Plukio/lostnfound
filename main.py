@@ -3,7 +3,7 @@ import os
 from PIL import Image
 from model import process_video, save_detected_frames
 
-st.title('🎥 Video Object Detection with CLIP and YOLO')
+st.title('🎥 🕵️‍♂️ Video Object Finder with CLIPxYOLOworld Duo!')
 
 uploaded_file = st.file_uploader("Upload a video file", type=["mp4", "avi", "mov"])
 text_input = st.text_input("Enter text to detect objects", "cat")
