@@ -48,8 +48,8 @@ def find_object_in_frame(clip_model, clip_processor, yolo_model, frame, text_inp
     yolo_model.set_classes(classes)
 
     # YOLO object detection
-    results = yolo_model.infer(frame_pil, confidence=confidence_threshold).with_nms(threshold=0.01)
-    detections = sv.Detections.from_inference(results)
+    results = yolo_model.infer(frame_pil, confidence=confidence_threshold)
+    detections = sv.Detections.from_inference(results).with_nms(threshold=0.01)
 
     text_tokens = clip_processor(text=text_input, return_tensors="pt", padding=True).input_ids.to(device)
     with torch.no_grad():
