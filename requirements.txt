@@ -10,4 +10,4 @@ numpy
 spacy
 supervision
 onnxruntime-gpu==1.15.1
--q "inference-gpu[yolo-world]==0.9.12rc1"
+inference-gpu[yolo-world]==0.9.12rc1
