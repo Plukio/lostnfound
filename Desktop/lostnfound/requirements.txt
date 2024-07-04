@@ -1,0 +1,13 @@
+streamlit>=1.26.0
+opencv-python-headless
+torch
+torchvision
+transformers
+tqdm
+opencv-python
+Pillow
+numpy
+spacy
+supervision
+onnxruntime-gpu==1.15.1
+-q "inference-gpu[yolo-world]==0.9.12rc1"
