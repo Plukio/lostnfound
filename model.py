@@ -81,7 +81,7 @@ def process_video(video_path, text_input, output_path, confidence_threshold=0.01
 
     cnt = 0
     for frame in tqdm(frames, desc="Processing frames"):
-        if cnt % 5:
+        if cnt % 10:
             bbox, similarity = find_object_in_frame(clip_model, clip_processor, yolo_model, frame, text_input, device, confidence_threshold)
             if bbox:
                 x1, y1, x2, y2 = bbox
