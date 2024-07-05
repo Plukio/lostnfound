@@ -1,25 +1,11 @@
-# 📦 Streamlit App Starter Kit 
-```
-⬆️ (Replace above with your app's name)
-```
+# 🎥 🕵️‍♂️ Video Object Finder with CLIPxYOLOworld Duo!
 
-Description of the app ...
+Enhanced object detection with open-expression classes to find lost object in video with natural language.
 
-## Demo App
+## How to open the Demo App.
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://app-starter-kit.streamlit.app/)
+1. Download Start_Demo.ipynd and import it to Google Colab
+2. Run all using GPU.
+3. bash !curl https://loca.lt/mytunnelpassword
+will give you password to use when you chick thge like produced by bash !npx localtunnel --port 8501
 
-## GitHub Codespaces
-
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/app-starter-kit?quickstart=1)
-
-## Section Heading
-
-This is filler text, please replace this with text for this section.
-
-## Further Reading
-
-This is filler text, please replace this with a explanatory text about further relevant resources for this repo
-- Resource 1
-- Resource 2
-- Resource 3
