@@ -6,6 +6,6 @@ Enhanced object detection with open-expression classes to find lost object in vi
 
 1. Download Start_Demo.ipynd and import it to Google Colab
 2. Run all using GPU.
-3. bash !curl https://loca.lt/mytunnelpassword
-will give you password to use when you chick thge like produced by bash !npx localtunnel --port 8501
+3. ```!curl https://loca.lt/mytunnelpassword```
+will give you password to use when you chick thge like produced by ```!npx localtunnel --port 8501```
 
