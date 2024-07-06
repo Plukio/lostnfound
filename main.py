@@ -1,7 +1,7 @@
 import streamlit as st
 import os
 from PIL import Image
-from model import process_video, save_detected_frames
+from model.model import process_video, save_detected_frames
 
 st.title('🎥 🕵️‍♂️ Video Object Finder with CLIPxYOLOworld Duo!')
 
