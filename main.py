@@ -14,7 +14,9 @@ if uploaded_file is not None and st.button("Process Video"):
     st.write("Video uploaded successfully.")
 
     output_path = "output_frames"
-    process_video("uploaded_video.mp4", text_input, output_path)
+    progress_bar = st.progress(0)
+
+    process_video("uploaded_video.mp4", text_input, output_path, progress_bar)
 
     st.write(f"Frames processed and saved to {output_path}.")
     

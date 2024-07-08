@@ -75,19 +75,19 @@ def find_object_in_frame(clip_model, clip_processor, yolo_model, frame, text_inp
 
     return best_bbox, max_similarity
 
-def process_video(video_path, text_input, output_path, confidence_threshold=0.01):
+def process_video(video_path, text_input, output_path, progress_bar, confidence_threshold=0.01):
     frames = extract_frames(video_path)
     detected_frames = []
 
-    cnt = 0
-    for frame in tqdm(frames, desc="Processing frames"):
-        if cnt % 10:
+    for cnt, frame in enumerate(tqdm(frames, desc="Processing frames")):
+        if cnt % 10 == 0:
             bbox, similarity = find_object_in_frame(clip_model, clip_processor, yolo_model, frame, text_input, device, confidence_threshold)
             if bbox:
                 x1, y1, x2, y2 = bbox
                 cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
                 detected_frames.append((frame, similarity))
-        cnt += 1
+
+        progress_bar.progress((cnt + 1) / len(frames))
 
     detected_frames = sorted(detected_frames, key=lambda x: x[1], reverse=True)[:3]
     top_frames = [frame for frame, _ in detected_frames]
